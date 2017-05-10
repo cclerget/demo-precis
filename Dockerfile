@@ -9,4 +9,4 @@ RUN apt-get install -y \
 	
 COPY ./runsim.sh /
 RUN chmod +x /runsim.sh
-ENTRYPOINT ['/runsim.sh']
+ENTRYPOINT ['./runsim.sh']
