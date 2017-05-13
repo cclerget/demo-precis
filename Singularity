@@ -11,7 +11,8 @@ From: ubuntu:latest
 
 %runscript
   cd /tmp
-  
+  echo 'Get code and run simulations'
+
   git clone \
       https://github.com/ReScience-Archives/ReScience-Entry-Topalidou-Rougier-2015.git
 
