@@ -7,6 +7,6 @@ RUN apt-get install -y \
             python-matplotlib \
             git
 	
-COPY ./runsim.sh /
-RUN chmod +x /runsim.sh
+ONBUILD COPY ./runsim.sh /
+ONBUILD RUN chmod +x /runsim.sh
 ENTRYPOINT exec /runsim.sh
