@@ -1,12 +1,8 @@
-FROM ubuntu:latest
-	
-RUN apt-get update
-RUN apt-get install -y \
-            python-numpy \
-            cython \
-            python-matplotlib \
-            git
-	
-COPY ./runsim.sh /
-RUN chmod +x /runsim.sh
-ENTRYPOINT exec /runsim.sh
+FROM alpine
+
+# Create 3 directories, eache containing file1
+RUN mkdir -p /test
+RUN ln -s /toto /test/toto
+
+# Remove opaque-dir, re-create it
+RUN rm /test/toto
